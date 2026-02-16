@@ -260,6 +260,44 @@
     }
     .linkRow a:hover{ border-bottom-color: var(--stroke); color: var(--fg); }
 
+.linkRow a.iconLink{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: color-mix(in oklab, var(--card) 65%, transparent);
+  transition: transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
+}
+.linkRow a.iconLink:hover{
+  transform: translateY(-1px);
+  background: var(--card2);
+  border-color: color-mix(in oklab, var(--stroke) 70%, var(--fg) 10%);
+  color: var(--fg);
+}
+.linkRow img.icon{
+  width: 16px;
+  height: 16px;
+  display: block;
+  opacity: .9;
+  filter: invert(1);
+}
+.linkRow a.emailLink{
+  padding: 8px 6px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+.linkRow a.emailLink:hover{
+  border-color: var(--stroke);
+  background: var(--card);
+}
+@media (max-width: 520px){
+  .linkRow span.iconText{ display:none; }
+  .linkRow a.iconLink{ padding: 8px 9px; }
+}
+
+
     /* Right column: portrait + highlights */
     .stack{ display:flex; flex-direction:column; gap: 16px; }
     .mini{
@@ -550,10 +588,19 @@
           </div>
 
           <div class="linkRow" aria-label="External links">
-            <a href="https://github.com/AhanBhatt" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/ahan-bhatt/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://scholar.google.com/citations?user=gteC3uwAAAAJ&hl=en" target="_blank" rel="noreferrer">Scholar</a>
-            <a href="mailto:bhattahan@gmail.com">bhattahan@gmail.com</a>
+            <a class="iconLink" href="https://github.com/AhanBhatt" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <img class="icon" src="./assets/Icons/github.svg" alt="" />
+              <span class="iconText">GitHub</span>
+            </a>
+            <a class="iconLink" href="https://www.linkedin.com/in/ahan-bhatt/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <img class="icon" src="./assets/Icons/linkedin.svg" alt="" />
+              <span class="iconText">LinkedIn</span>
+            </a>
+            <a class="iconLink" href="https://scholar.google.com/citations?user=gteC3uwAAAAJ&hl=en" target="_blank" rel="noreferrer" aria-label="Google Scholar">
+              <img class="icon" src="./assets/Icons/scholar.svg" alt="" />
+              <span class="iconText">Scholar</span>
+            </a>
+            <a class="emailLink" href="mailto:bhattahan@gmail.com">bhattahan@gmail.com</a>
           </div>
         </div>
 
