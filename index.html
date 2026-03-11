@@ -401,6 +401,11 @@
       background: linear-gradient(180deg, var(--card2), transparent 85%);
       border-color: color-mix(in oklab, var(--stroke) 70%, var(--fg) 10%);
     }
+    .card.cardLink{ cursor: pointer; }
+    .card.cardLink:focus-visible{
+      outline: 2px solid rgba(255,255,255,.88);
+      outline-offset: 3px;
+    }
     .card.wide{ grid-column: span 12; }
     .card.third{ grid-column: span 4; }
 
@@ -1032,6 +1037,40 @@
     window.addEventListener("scroll", updateProgress, { passive: true });
     window.addEventListener("resize", updateProgress);
     updateProgress();
+
+    // Make paper/project cards open their primary link when the card is clicked.
+    const clickableCards = Array.from(document.querySelectorAll("#pubs .card, #projects .card"));
+    clickableCards.forEach((card) => {
+      const primaryLink = card.querySelector(".meta a[href]");
+      if (!primaryLink) return;
+
+      const openPrimaryLink = (openInNewTab = primaryLink.target === "_blank") => {
+        if (openInNewTab) {
+          window.open(primaryLink.href, "_blank", "noopener,noreferrer");
+          return;
+        }
+        window.location.href = primaryLink.href;
+      };
+
+      card.classList.add("cardLink");
+      card.tabIndex = 0;
+      card.setAttribute("role", "link");
+
+      const title = card.querySelector("h3")?.textContent?.trim();
+      if (title) card.setAttribute("aria-label", `Open ${title}`);
+
+      card.addEventListener("click", (event) => {
+        if (event.target.closest("a")) return;
+        openPrimaryLink(event.ctrlKey || event.metaKey || primaryLink.target === "_blank");
+      });
+
+      card.addEventListener("keydown", (event) => {
+        if (event.target.closest("a")) return;
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        openPrimaryLink(event.ctrlKey || event.metaKey || primaryLink.target === "_blank");
+      });
+    });
 
     // Hero typing effect
     const typedEl = document.getElementById("typed");
