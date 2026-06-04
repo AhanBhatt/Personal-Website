@@ -103,6 +103,12 @@
       padding: 14px 0;
       gap: 18px;
     }
+    .navPanel{
+      display:flex;
+      align-items:center;
+      gap: 18px;
+      margin-left: auto;
+    }
     .brand{
       display:flex;
       align-items:baseline;
@@ -111,6 +117,43 @@
     }
     .brand b{ font-weight: 800; font-size: 15px; }
     .brand span{ font-size: 13px; color: var(--muted2); font-weight: 500; }
+
+    .menuToggle{
+      display:none;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border-radius: 999px;
+      border: 1px solid var(--stroke);
+      background: var(--card);
+      color: var(--fg);
+      cursor: pointer;
+      align-items:center;
+      justify-content:center;
+      transition: transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease);
+    }
+    .menuToggle:hover{
+      transform: translateY(-1px);
+      background: var(--card2);
+      border-color: color-mix(in oklab, var(--stroke) 70%, var(--fg) 10%);
+    }
+    .menuIcon{
+      display:flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .menuIcon span{
+      display:block;
+      width: 16px;
+      height: 1.5px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform .2s var(--ease), opacity .2s var(--ease);
+      transform-origin: center;
+    }
+    .nav.open .menuIcon span:nth-child(1){ transform: translateY(5.5px) rotate(45deg); }
+    .nav.open .menuIcon span:nth-child(2){ opacity: 0; }
+    .nav.open .menuIcon span:nth-child(3){ transform: translateY(-5.5px) rotate(-45deg); }
 
     nav ul{
       margin:0; padding:0; list-style:none;
@@ -151,6 +194,46 @@
     .btn:hover{ transform: translateY(-1px); background: var(--card2); }
     .btn.primary{
       background: linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
+    }
+
+    @media (max-width: 760px){
+      .nav{
+        flex-wrap: wrap;
+        padding: 12px 0;
+      }
+      .menuToggle{
+        display:inline-flex;
+        margin-left: auto;
+      }
+      .navPanel{
+        display:none;
+        width: 100%;
+        margin-left: 0;
+        padding-top: 12px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        border-top: 1px solid var(--stroke);
+      }
+      .nav.open .navPanel{ display:flex; }
+      nav ul{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+      }
+      nav a{
+        display:block;
+        text-align: left;
+        padding: 12px 14px;
+        background: color-mix(in oklab, var(--card) 72%, transparent);
+        border-color: var(--stroke);
+      }
+      nav a:hover{ transform: none; }
+      .actions{ width: 100%; }
+      .actions .btn{
+        width: 100%;
+        justify-content:center;
+      }
     }
 
     /* Hero */
@@ -510,7 +593,7 @@
     @media (prefers-reduced-motion: reduce){
       html{ scroll-behavior: auto; }
       .reveal{ opacity: 1; transform: none; transition: none; }
-      .btn, .card, nav a{ transition: none; }
+      .btn, .card, nav a, .menuToggle, .menuIcon span{ transition: none; }
       .caret{ animation: none; }
       .progressBar{ transition: none; }
     }
@@ -539,23 +622,40 @@
   <div class="grain"></div>
 
   <header>
-    <div class="container nav">
+    <div class="container nav" id="siteNav">
       <a class="brand" href="#top" aria-label="Home">
         <b>Ahan Bhatt</b><span>Research • Engineering</span>
       </a>
 
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#timeline">Experience</a></li>
-          <li><a href="#pubs">Papers</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <button
+        class="menuToggle"
+        id="menuToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primaryNavPanel"
+        aria-label="Toggle navigation"
+      >
+        <span class="menuIcon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
 
-      <div class="actions">
-        <a class="btn primary" href="#contact">Let’s talk</a>
+      <div class="navPanel" id="primaryNavPanel">
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#timeline">Experience</a></li>
+            <li><a href="#pubs">Papers</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="actions">
+          <a class="btn primary" href="#contact">Let’s talk</a>
+        </div>
       </div>
     </div>
   </header>
@@ -1026,6 +1126,35 @@
     window.addEventListener("scroll", updateProgress, { passive: true });
     window.addEventListener("resize", updateProgress);
     updateProgress();
+
+    // Mobile navigation
+    const siteNav = document.getElementById("siteNav");
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenuLinks = Array.from(document.querySelectorAll("#primaryNavPanel a"));
+
+    function setMenuOpen(open){
+      if (!siteNav || !menuToggle) return;
+      siteNav.classList.toggle("open", open);
+      menuToggle.setAttribute("aria-expanded", String(open));
+    }
+
+    if (siteNav && menuToggle) {
+      menuToggle.addEventListener("click", () => {
+        setMenuOpen(!siteNav.classList.contains("open"));
+      });
+
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => setMenuOpen(false));
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") setMenuOpen(false);
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 760) setMenuOpen(false);
+      });
+    }
 
     // Make paper/project cards open their primary link when the card is clicked.
     const clickableCards = Array.from(document.querySelectorAll("#pubs .card, #projects .card"));
