@@ -680,8 +680,9 @@
 
           <p class="sub">
             I build AI systems that pair research rigor with deployable engineering.
-            My recent work spans neuro-symbolic reasoning, multimodal safety, knowledge graph generation,
-            anomaly detection, and time-series modeling, along with the backend, data, and cloud tooling
+            My recent work spans human-AI reliance and observability, neuro-symbolic reasoning,
+            multimodal safety, knowledge graph generation, anomaly detection, and time-series modeling,
+            along with the backend, data, and cloud tooling
             needed to make those systems useful outside a notebook.
           </p>
 
@@ -719,9 +720,9 @@
           <div class="mini reveal">
             <h3>Now</h3>
             <ul class="list">
+              <li><span class="dot"></span><span>ReliaGuard Studio: neuro-symbolic human-AI reliance detection with conformal gating and explainable dashboards</span></li>
               <li><span class="dot"></span><span>Research Forge: a self-improving research agent with long-term graph memory</span></li>
               <li><span class="dot"></span><span>Meeting AI Assistant: real-time desktop copilot with audio, screenshot, and document context</span></li>
-              <li><span class="dot"></span><span>ReliaGuard Studio: neuro-symbolic human-AI reliance detection with conformal gating and explainable dashboards</span></li>
             </ul>
           </div>
         </aside>
@@ -744,7 +745,7 @@
               <span class="tag">What I focus on</span>
             </div>
             <p>
-              Interpretable AI, multimodal toxicity mitigation, anomaly detection,
+              Interpretable AI, human-AI reliance, multimodal toxicity mitigation,
               structured knowledge extraction, and evaluation that reveals where models actually break.
             </p>
             <div class="meta">
@@ -855,7 +856,7 @@
             </div>
             <p>Built ReliaGuard Studio to detect overreliance and underreliance in human-AI decision-making.</p>
             <ul class="bullets">
-              <li>Used Next.js, TypeScript, FastAPI, PostgreSQL, Docker, and MLflow to build the end-to-end system.</li>
+              <li>Used Next.js, TypeScript, FastAPI, PostgreSQL, Docker, and MLflow to build the end-to-end observability platform.</li>
               <li>Combined neuro-symbolic risk modeling, conformal gating, and explainable dashboards for interpretable oversight.</li>
             </ul>
           </div>
@@ -998,12 +999,24 @@
         <div class="grid">
         <article class="card third reveal">
             <div class="cardTop">
+            <h3>ReliaGuard Studio</h3>
+            <span class="tag">AI observability</span>
+            </div>
+            <p>Next.js, TypeScript, and FastAPI observability platform with SDKs, guardrail APIs, review queues, and conformal neuro-symbolic models to detect and audit overreliance and underreliance in human-AI workflows.</p>
+            <div class="meta">
+            <span>Next.js</span><span>FastAPI</span><span>MLflow</span>
+            <span><a href="https://github.com/AhanBhatt/ReliaGuard-Studio" target="_blank" rel="noreferrer">Code ↗</a></span>
+            </div>
+        </article>
+
+        <article class="card third reveal">
+            <div class="cardTop">
             <h3>Research Forge - A Self-Improving Research Agent</h3>
             <span class="tag">Research agent</span>
             </div>
-            <p>Universal self-improving AI research agent that discovers papers, generates hypotheses, runs experiments, and updates its reasoning strategy using long-term graph memory.</p>
+            <p>Universal self-improving AI research agent that discovers papers, generates hypotheses, runs experiments in a sandbox Python environment, and updates its reasoning strategy using long-term graph memory.</p>
             <div class="meta">
-            <span>LangGraph</span><span>arXiv</span><span>Experiments</span>
+            <span>LangGraph</span><span>Sandbox</span><span>Experiments</span>
             <span><a href="https://github.com/AhanBhatt/Research-Forge?tab=readme-ov-file" target="_blank" rel="noreferrer">Code &#8599;</a></span>
             </div>
         </article>
@@ -1013,7 +1026,7 @@
             <h3>Meeting AI Assistant</h3>
             <span class="tag">Desktop copilot</span>
             </div>
-            <p>Real-time AI meeting copilot desktop app that captures system audio, transcribes conversations, and streams context-aware responses using the OpenAI API with screenshot and document support.</p>
+            <p>Real-time AI meeting copilot desktop app that captures system audio, transcribes conversations, and streams context-aware responses using the OpenAI API with screenshot and document context support.</p>
             <div class="meta">
             <span>Electron</span><span>OpenAI</span><span>Realtime</span>
             <span><a href="https://github.com/AhanBhatt/AI-Meeting-Assistant" target="_blank" rel="noreferrer">Code &#8599;</a></span>
@@ -1022,13 +1035,13 @@
 
         <article class="card third reveal">
             <div class="cardTop">
-            <h3>NeuroSymbolic Cognitive Decline Analyzer</h3>
-            <span class="tag">Explainable AI</span>
+            <h3>Time Series Foundation Model Evaluation for Anomaly Detection</h3>
+            <span class="tag">Benchmarking</span>
             </div>
-            <p>Hybrid NeuroSymbolic AI framework that combines neural feature extraction with symbolic reasoning and fuzzy logic rules to assess cognitive decline risk while preserving interpretable reasoning traces.</p>
+            <p>Benchmarked TimeGPT, Chronos, and Time-MOE across multiple datasets, showing where traditional statistical and deep learning models can still outperform TSFMs.</p>
             <div class="meta">
-            <span>NeuroSymbolic</span><span>Fuzzy logic</span><span>Reasoning traces</span>
-            <span><a href="https://ahanbhatt.github.io/NeuroSymbolic-Cognitive-Analyzer/" target="_blank" rel="noreferrer">Demo ↗</a></span>
+            <span>Time series</span><span>Anomaly</span><span>Evaluation</span>
+            <span><a href="https://github.com/smtmnfg/TSFM" target="_blank" rel="noreferrer">Code ↗</a></span>
             </div>
         </article>
 
@@ -1041,18 +1054,6 @@
             <div class="meta">
             <span>Knowledge graphs</span><span>LLMs</span><span>GraphRAG</span>
             <span><a href="https://github.com/AhanBhatt/Text2KG" target="_blank" rel="noreferrer">Code ↗</a></span>
-            </div>
-        </article>
-
-        <article class="card third reveal">
-            <div class="cardTop">
-            <h3>Time Series Foundation Model Evaluation for Anomaly Detection</h3>
-            <span class="tag">Benchmarking</span>
-            </div>
-            <p>Benchmarked TimeGPT, Chronos, and Time-MOE across multiple datasets, showing where traditional statistical and deep learning models still outperform TSFMs.</p>
-            <div class="meta">
-            <span>Time series</span><span>Anomaly</span><span>Evaluation</span>
-            <span><a href="https://github.com/smtmnfg/TSFM" target="_blank" rel="noreferrer">Code ↗</a></span>
             </div>
         </article>
 
