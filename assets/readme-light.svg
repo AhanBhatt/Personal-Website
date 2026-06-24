@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback, Consolas, Monaco, monospace" width="1120px" height="500px" font-size="16px">
+<style>
+@font-face { src: local('Consolas'); font-family: 'ConsolasFallback'; font-display: swap; }
+text, tspan { white-space: pre; } .ascii { fill: #24292f; } .key { fill: #cf222e; } .value { fill: #0969da; } .cc { fill: #6e7781; }
+</style>
+  <rect width="1120" height="500" rx="18" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text class="ascii">
+    <tspan x="28" y="34">           x$$x                       </tspan>
+    <tspan x="28" y="50">       X$$$$&amp;$XX$$$Xxxx               </tspan>
+    <tspan x="28" y="66">     xx$$$$XXXX$$&amp;$$$&amp;&amp;&amp;&amp;$XXX         </tspan>
+    <tspan x="28" y="82">   xxXXXX$$$$$&amp;&amp;&amp;$X$$$$&amp;&amp;&amp;&amp;&amp;$$$X      </tspan>
+    <tspan x="28" y="98">  X$$X$$$$&amp;&amp;&amp;&amp;&amp;&amp;&amp;$$&amp;&amp;$$$&amp;&amp;&amp;&amp;&amp;&amp;&amp;$&amp;$X   </tspan>
+    <tspan x="28" y="114"> XX$X$$$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$$$$&amp;$&amp;$$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$  </tspan>
+    <tspan x="28" y="130">XX$$$X$$$&amp;&amp;&amp;&amp;&amp;$$$&amp;&amp;$$$$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$ </tspan>
+    <tspan x="28" y="146">$$$$$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$$$$&amp;&amp;&amp;$XX$X$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$</tspan>
+    <tspan x="28" y="162">$$$$$$$$$$$$Xx+++x$&amp;&amp;&amp;$$$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$</tspan>
+    <tspan x="28" y="178">$$$$$$$Xx++;;;;;;;++xX$$$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;X</tspan>
+    <tspan x="28" y="194">$$$&amp;&amp;&amp;$Xx+;:::::;:;;;+++X&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$$</tspan>
+    <tspan x="28" y="210">  X&amp;&amp;&amp;&amp;Xx+;;:::::;;;;;;+x$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$ </tspan>
+    <tspan x="28" y="226">  X&amp;&amp;&amp;$x+;;;;;;;;;;;;;++xX&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$ </tspan>
+    <tspan x="28" y="242">  X$$&amp;X;++xxXX$$XX+xx$$$$$$$$$$&amp;&amp;&amp;&amp;&amp;X </tspan>
+    <tspan x="28" y="258">   XxX$+xXXXXX$$XX;xX$$$$$$$$$$&amp;&amp;&amp;$$$ </tspan>
+    <tspan x="28" y="274">   +;+x+++XX$$$$X;:+X$$$$$$$$$&amp;&amp;$$X   </tspan>
+    <tspan x="28" y="290">   ;:::;;+++++xx;:;+xXXxxXXXXXX$XXX   </tspan>
+    <tspan x="28" y="306">    ;::;;;;;;++;:::;+x++++xxXXX$XX    </tspan>
+    <tspan x="28" y="322">     ;;;;;;;;;;++;;xXXX+;+xXXXXXx     </tspan>
+    <tspan x="28" y="338">       x;;;;;;::;;xXXXXX;+xXXXXX      </tspan>
+    <tspan x="28" y="354">        ;;;;;+x+++xxxX$++xXXXX        </tspan>
+    <tspan x="28" y="370">        x+;;;:;;+;;++x+++XXXX         </tspan>
+    <tspan x="28" y="386">         ++;;;;;++xxx+++XXXX          </tspan>
+    <tspan x="28" y="402">         x;++;:::;;:;;+xXXXX          </tspan>
+    <tspan x="28" y="418">         X;;;++;::::;+XXXXXX          </tspan>
+    <tspan x="28" y="434">         +;;;;+xXXxXX$XXXXXXX         </tspan>
+    <tspan x="28" y="450">       +++;;:;;;;+xXXXXXXXXX$XX       </tspan>
+    <tspan x="28" y="466"> +++++++++++::;;;+xXXXXXXXXX$$$$$XX   </tspan>
+  </text>
+  <text>
+  <tspan x="455" y="34" class="value">ahan@portfolio </tspan><tspan class="cc">------------------------------------------------</tspan>
+  <tspan x="455" y="68" class="cc">*</tspan><tspan class="key">  Role:     </tspan><tspan class="cc"> .. </tspan><tspan class="value">AI Researcher + ML Engineer</tspan>
+  <tspan x="455" y="92" class="cc">*</tspan><tspan class="key">  Edu:      </tspan><tspan class="cc"> .. </tspan><tspan class="value">MS CSE @ UCSC, BTech CE @ Indus</tspan>
+  <tspan x="455" y="116" class="cc">*</tspan><tspan class="key">  Focus:    </tspan><tspan class="cc"> .. </tspan><tspan class="value">AI observability, reliance, GraphRAG</tspan>
+  <tspan x="455" y="140" class="cc">*</tspan><tspan class="key">  Lab:      </tspan><tspan class="cc"> ......... </tspan><tspan class="value">AIEA Lab @ UCSC</tspan>
+  <tspan x="455" y="164" class="cc">*</tspan><tspan class="key">  Stack:    </tspan><tspan class="cc"> .. </tspan><tspan class="value">Python, TypeScript, FastAPI, Node.js</tspan>
+  <tspan x="455" y="188" class="cc">*</tspan><tspan class="key">  ML:       </tspan><tspan class="cc"> .. </tspan><tspan class="value">PyTorch, TensorFlow, Transformers</tspan>
+  <tspan x="455" y="212" class="cc">*</tspan><tspan class="key">  Data:     </tspan><tspan class="cc"> .. </tspan><tspan class="value">PostgreSQL, Redis, ChromaDB, RAG</tspan>
+  <tspan x="455" y="236" class="cc">*</tspan><tspan class="key">  Cloud:    </tspan><tspan class="cc"> .. </tspan><tspan class="value">AWS, Docker, Kubernetes, CI/CD</tspan>
+  <tspan x="455" y="260" class="cc">*</tspan><tspan class="key">  Builds:   </tspan><tspan class="cc"> .. </tspan><tspan class="value">ReliaGuard Studio, Research Forge</tspan>
+  <tspan x="455" y="284" class="cc">*</tspan><tspan class="key">  Also:     </tspan><tspan class="cc"> .. </tspan><tspan class="value">Meeting AI Assistant, TSFM eval</tspan>
+  <tspan x="455" y="308" class="cc">*</tspan><tspan class="key">  Papers:   </tspan><tspan class="cc"> .. </tspan><tspan class="value">IEEE Xplore, arXiv, AAAI Workshop</tspan>
+  <tspan x="455" y="346" class="cc">- Contact -------------------------------------------------------</tspan>
+  <tspan x="455" y="380" class="cc">*</tspan><tspan class="key">  Email:    </tspan><tspan class="cc"> ..... </tspan><tspan class="value">bhattahan@gmail.com</tspan>
+  <tspan x="455" y="404" class="cc">*</tspan><tspan class="key">  GitHub:   </tspan><tspan class="cc"> .... </tspan><tspan class="value">github.com/AhanBhatt</tspan>
+  <tspan x="455" y="428" class="cc">*</tspan><tspan class="key">  LinkedIn: </tspan><tspan class="cc"> .. </tspan><tspan class="value">linkedin.com/in/ahan-bhatt</tspan>
+  <tspan x="455" y="452" class="cc">*</tspan><tspan class="key">  Scholar:  </tspan><tspan class="cc"> ............ </tspan><tspan class="value">gteC3uwAAAAJ</tspan>
+  <tspan x="455" y="476" class="cc">*</tspan><tspan class="key">  Repo:     </tspan><tspan class="cc"> ........ </tspan><tspan class="value">Personal-Website</tspan>
+  </text>
+</svg>
