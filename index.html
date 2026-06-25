@@ -647,8 +647,8 @@
           <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#timeline">Experience</a></li>
-            <li><a href="#pubs">Papers</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#pubs">Papers</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -680,9 +680,9 @@
 
           <p class="sub">
             I build AI systems that pair research rigor with deployable engineering.
-            My recent work spans human-AI reliance and observability, neuro-symbolic reasoning,
-            multimodal safety, knowledge graph generation, anomaly detection, and time-series modeling,
-            along with the backend, data, and cloud tooling
+            My recent work spans transformer compiler/runtime systems, human-AI reliance and observability,
+            neuro-symbolic reasoning, multimodal safety, knowledge graph generation,
+            anomaly detection, and time-series modeling, along with the backend, data, and cloud tooling
             needed to make those systems useful outside a notebook.
           </p>
 
@@ -720,9 +720,9 @@
           <div class="mini reveal">
             <h3>Now</h3>
             <ul class="list">
+              <li><span class="dot"></span><span>CacheIR: inspectable compiler and runtime for decoder-only transformer inference</span></li>
               <li><span class="dot"></span><span>ReliaGuard Studio: neuro-symbolic human-AI reliance detection with conformal gating and explainable dashboards</span></li>
               <li><span class="dot"></span><span>Research Forge: a self-improving research agent with long-term graph memory</span></li>
-              <li><span class="dot"></span><span>Meeting AI Assistant: real-time desktop copilot with audio, screenshot, and document context</span></li>
             </ul>
           </div>
         </aside>
@@ -745,7 +745,7 @@
               <span class="tag">What I focus on</span>
             </div>
             <p>
-              Interpretable AI, human-AI reliance, multimodal toxicity mitigation,
+              Interpretable AI, transformer inference systems, human-AI reliance,
               structured knowledge extraction, and evaluation that reveals where models actually break.
             </p>
             <div class="meta">
@@ -922,73 +922,6 @@
       </div>
     </section>
 
-    <section id="pubs">
-      <div class="container">
-        <div class="sectionHead">
-          <h2>Papers</h2>
-          <p>Conference papers, workshop papers, and preprints.</p>
-        </div>
-
-        <div class="grid">
-          <article class="card reveal">
-            <div class="cardTop">
-              <h3>Leveraging LSTM for Predictive Modeling of Satellite Clock Bias</h3>
-              <span class="tag">IEEE Xplore</span>
-            </div>
-            <p>
-              LSTM-based clock-bias forecasting with a practical preprocessing pipeline for navigation reliability.
-            </p>
-            <div class="meta">
-              <span>CDMA 2025</span><span>Time series</span><span>Navigation</span>
-              <span><a href="https://ieeexplore.ieee.org/abstract/document/10908787" target="_blank" rel="noreferrer">Link ↗</a></span>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="cardTop">
-              <h3>Generating Knowledge Graphs from Large Language Models: A Comparative Study of GPT-4, LLaMA 2, and BERT</h3>
-              <span class="tag">arXiv</span>
-            </div>
-            <p>
-              Structured knowledge graph generation from unstructured text, evaluated for semantic quality and GraphRAG readiness.
-            </p>
-            <div class="meta">
-              <span>Knowledge graphs</span><span>LLMs</span><span>GraphRAG</span>
-              <span><a href="https://arxiv.org/abs/2412.07412" target="_blank" rel="noreferrer">Link ↗</a></span>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="cardTop">
-              <h3>Med-Bot: An AI-Powered Assistant to Provide Accurate and Reliable Medical Information</h3>
-              <span class="tag">arXiv</span>
-            </div>
-            <p>
-              Retrieval-augmented medical assistant for grounded answers from medical literature PDFs.
-            </p>
-            <div class="meta">
-              <span>RAG</span><span>Healthcare</span><span>LLMs</span>
-              <span><a href="https://arxiv.org/abs/2411.09648" target="_blank" rel="noreferrer">Link ↗</a></span>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="cardTop">
-              <h3>Time Series Foundational Models: Their Role in Anomaly Detection and Prediction</h3>
-              <span class="tag">AAAI 2025 Workshop</span>
-            </div>
-            <p>
-              Evaluation of time series foundation models for anomaly detection and prediction under realistic benchmarking settings.
-            </p>
-            <div class="meta">
-              <span>Anomaly detection</span><span>TSFM</span><span>Evaluation</span>
-              <span><a href="https://arxiv.org/abs/2412.19286" target="_blank" rel="noreferrer">Link ↗</a></span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section id="projects">
     <div class="container">
         <div class="sectionHead">
@@ -997,6 +930,18 @@
         </div>
 
         <div class="grid">
+        <article class="card third reveal">
+            <div class="cardTop">
+            <h3>CacheIR</h3>
+            <span class="tag">Compiler runtime</span>
+            </div>
+            <p>Inspectable compiler and runtime for decoder-only transformer inference: imports Llama, Mistral, and Qwen-style models into a custom IR, specializes prefill/decode graphs, plans KV-cache-aware execution, selects backend kernels, and runs through a reference runtime.</p>
+            <div class="meta">
+            <span>Custom IR</span><span>KV cache</span><span>Runtime</span>
+            <span><a href="https://github.com/AhanBhatt/CacheIR" target="_blank" rel="noreferrer">Code ↗</a></span>
+            </div>
+        </article>
+
         <article class="card third reveal">
             <div class="cardTop">
             <h3>ReliaGuard Studio</h3>
@@ -1070,6 +1015,73 @@
         </article>
         </div>
     </div>
+    </section>
+
+    <section id="pubs">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Papers</h2>
+          <p>Conference papers, workshop papers, and preprints.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card reveal">
+            <div class="cardTop">
+              <h3>Leveraging LSTM for Predictive Modeling of Satellite Clock Bias</h3>
+              <span class="tag">IEEE Xplore</span>
+            </div>
+            <p>
+              LSTM-based clock-bias forecasting with a practical preprocessing pipeline for navigation reliability.
+            </p>
+            <div class="meta">
+              <span>CDMA 2025</span><span>Time series</span><span>Navigation</span>
+              <span><a href="https://ieeexplore.ieee.org/abstract/document/10908787" target="_blank" rel="noreferrer">Link ↗</a></span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="cardTop">
+              <h3>Generating Knowledge Graphs from Large Language Models: A Comparative Study of GPT-4, LLaMA 2, and BERT</h3>
+              <span class="tag">arXiv</span>
+            </div>
+            <p>
+              Structured knowledge graph generation from unstructured text, evaluated for semantic quality and GraphRAG readiness.
+            </p>
+            <div class="meta">
+              <span>Knowledge graphs</span><span>LLMs</span><span>GraphRAG</span>
+              <span><a href="https://arxiv.org/abs/2412.07412" target="_blank" rel="noreferrer">Link ↗</a></span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="cardTop">
+              <h3>Med-Bot: An AI-Powered Assistant to Provide Accurate and Reliable Medical Information</h3>
+              <span class="tag">arXiv</span>
+            </div>
+            <p>
+              Retrieval-augmented medical assistant for grounded answers from medical literature PDFs.
+            </p>
+            <div class="meta">
+              <span>RAG</span><span>Healthcare</span><span>LLMs</span>
+              <span><a href="https://arxiv.org/abs/2411.09648" target="_blank" rel="noreferrer">Link ↗</a></span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="cardTop">
+              <h3>Time Series Foundational Models: Their Role in Anomaly Detection and Prediction</h3>
+              <span class="tag">AAAI 2025 Workshop</span>
+            </div>
+            <p>
+              Evaluation of time series foundation models for anomaly detection and prediction under realistic benchmarking settings.
+            </p>
+            <div class="meta">
+              <span>Anomaly detection</span><span>TSFM</span><span>Evaluation</span>
+              <span><a href="https://arxiv.org/abs/2412.19286" target="_blank" rel="noreferrer">Link ↗</a></span>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
 
