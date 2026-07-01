@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0b0b0c" />
   <title>Ahan Bhatt - Interpretable AI and ML Systems</title>
-  <meta name="description" content="Ahan Bhatt - MS CSE @ UCSC building interpretable AI, neuro-symbolic systems, knowledge graphs, and production ML tooling." />
+  <meta name="description" content="Ahan Bhatt - MS CSE @ UCSC building interpretable AI, compiler/runtime systems, LLM evaluation tooling, and production ML systems." />
 
  
   <meta property="og:title" content="Ahan Bhatt - Interpretable AI and ML Systems" />
-  <meta property="og:description" content="NeuroSymbolic AI • Knowledge Graphs • Evaluation • ML Systems" />
+  <meta property="og:description" content="Compiler Runtime • AI Evaluation • NeuroSymbolic AI • ML Systems" />
   <meta property="og:type" content="website" />
 
 
@@ -680,8 +680,8 @@
 
           <p class="sub">
             I build AI systems that pair research rigor with deployable engineering.
-            My recent work spans transformer compiler/runtime systems, human-AI reliance and observability,
-            neuro-symbolic reasoning, multimodal safety, knowledge graph generation,
+            My recent work spans transformer compiler/runtime systems, failure-to-eval compilers,
+            human-AI reliance and observability, neuro-symbolic reasoning, multimodal safety, knowledge graph generation,
             anomaly detection, and time-series modeling, along with the backend, data, and cloud tooling
             needed to make those systems useful outside a notebook.
           </p>
@@ -721,8 +721,8 @@
             <h3>Now</h3>
             <ul class="list">
               <li><span class="dot"></span><span>CacheIR: inspectable compiler and runtime for decoder-only transformer inference</span></li>
+              <li><span class="dot"></span><span>BreakPoint: failure-to-eval compiler for adversarial LLM regression suites</span></li>
               <li><span class="dot"></span><span>ReliaGuard Studio: neuro-symbolic human-AI reliance detection with conformal gating and explainable dashboards</span></li>
-              <li><span class="dot"></span><span>Research Forge: a self-improving research agent with long-term graph memory</span></li>
             </ul>
           </div>
         </aside>
@@ -745,8 +745,8 @@
               <span class="tag">What I focus on</span>
             </div>
             <p>
-              Interpretable AI, transformer inference systems, human-AI reliance,
-              structured knowledge extraction, and evaluation that reveals where models actually break.
+              Interpretable AI, transformer inference systems, failure-to-eval compilers,
+              human-AI reliance, structured knowledge extraction, and evaluation that reveals where models actually break.
             </p>
             <div class="meta">
               <span>Interpretability</span><span>Safety</span><span>Knowledge Graphs</span><span>Evaluation</span>
@@ -854,10 +854,11 @@
               <b>Researcher - AI Explainability and Accountability (AIEA) Lab @ UCSC</b>
               <span>Sep 2025 – Jun 2026</span>
             </div>
-            <p>Built ReliaGuard Studio to detect overreliance and underreliance in human-AI decision-making.</p>
+            <p>Built ReliaGuard Studio and BreakPoint for human-AI reliance detection and adversarial LLM evaluation.</p>
             <ul class="bullets">
-              <li>Used Next.js, TypeScript, FastAPI, PostgreSQL, Docker, and MLflow to build the end-to-end observability platform.</li>
-              <li>Combined neuro-symbolic risk modeling, conformal gating, and explainable dashboards for interpretable oversight.</li>
+              <li>Used Next.js, TypeScript, FastAPI, PostgreSQL, Docker, and MLflow across observability and evaluation workflows.</li>
+              <li>Combined neuro-symbolic risk modeling, conformal gating, multi-judge validation, and explainable dashboards.</li>
+              <li>Compiled real LLM failure modes into adversarial regression suites with versioned traps and rubrics.</li>
             </ul>
           </div>
 
@@ -904,7 +905,7 @@
             </div>
             <p>Master of Science in Computer Science and Engineering - Santa Cruz, California</p>
             <ul class="bullets">
-              <li>GPA: 3.94</li>
+              <li>GPA: 3.82</li>
             </ul>
           </div>
 
@@ -939,6 +940,18 @@
             <div class="meta">
             <span>Custom IR</span><span>KV cache</span><span>Runtime</span>
             <span><a href="https://github.com/AhanBhatt/CacheIR" target="_blank" rel="noreferrer">Code ↗</a></span>
+            </div>
+        </article>
+
+        <article class="card third reveal">
+            <div class="cardTop">
+            <h3>BreakPoint</h3>
+            <span class="tag">LLM evaluation</span>
+            </div>
+            <p>Failure-to-eval compiler for LLM systems that mines real failure modes into versioned adversarial regression suites with DSL-defined traps and rubrics, multi-judge calibration, RAG/tool simulators, CI gates, and FastAPI/Next.js dashboards.</p>
+            <div class="meta">
+            <span>Eval suites</span><span>CI gates</span><span>FastAPI</span>
+            <span><a href="https://github.com/AhanBhatt/BreakPoint" target="_blank" rel="noreferrer">Code ↗</a></span>
             </div>
         </article>
 
@@ -1209,6 +1222,7 @@
       "stay interpretable in real use.",
       "blend research rigor with deployable engineering.",
       "turn unstructured data into auditable reasoning.",
+      "compile failure modes into eval suites.",
       "surface failure modes before deployment.",
       "connect models, data, and evaluation cleanly."
     ];
