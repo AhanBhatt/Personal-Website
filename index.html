@@ -680,7 +680,7 @@
 
           <p class="sub">
             I build AI systems that pair research rigor with deployable engineering.
-            My recent work spans transformer compiler/runtime systems, failure-to-eval compilers,
+            My recent work spans GPU-accelerated transformer compiler/runtime systems, failure-to-eval compilers,
             human-AI reliance and observability, neuro-symbolic reasoning, multimodal safety, knowledge graph generation,
             anomaly detection, and time-series modeling, along with the backend, data, and cloud tooling
             needed to make those systems useful outside a notebook.
@@ -720,7 +720,7 @@
           <div class="mini reveal">
             <h3>Now</h3>
             <ul class="list">
-              <li><span class="dot"></span><span>CacheIR: inspectable compiler and runtime for decoder-only transformer inference</span></li>
+              <li><span class="dot"></span><span>CacheIR: GPU-accelerated compiler and runtime for decoder-only transformer inference</span></li>
               <li><span class="dot"></span><span>BreakPoint: failure-to-eval compiler for adversarial LLM regression suites</span></li>
               <li><span class="dot"></span><span>ReliaGuard Studio: neuro-symbolic human-AI reliance detection with conformal gating and explainable dashboards</span></li>
             </ul>
@@ -745,7 +745,7 @@
               <span class="tag">What I focus on</span>
             </div>
             <p>
-              Interpretable AI, transformer inference systems, failure-to-eval compilers,
+              Interpretable AI, GPU-accelerated transformer inference systems, failure-to-eval compilers,
               human-AI reliance, structured knowledge extraction, and evaluation that reveals where models actually break.
             </p>
             <div class="meta">
@@ -936,9 +936,9 @@
             <h3>CacheIR</h3>
             <span class="tag">Compiler runtime</span>
             </div>
-            <p>Inspectable compiler and runtime for decoder-only transformer inference: imports Llama, Mistral, and Qwen-style models into a custom IR, specializes prefill/decode graphs, plans KV-cache-aware execution, selects backend kernels, and runs through a reference runtime.</p>
+            <p>Inspectable compiler and runtime for GPU-accelerated decoder-only transformer inference: imports Llama, Mistral, and Qwen-style models into a custom IR, applies transformer-specific optimizations, plans memory and execution, selects CUDA kernels, and runs through a reference runtime with vLLM-compatible serving concepts.</p>
             <div class="meta">
-            <span>Custom IR</span><span>KV cache</span><span>Runtime</span>
+            <span>Custom IR</span><span>CUDA kernels</span><span>vLLM serving</span>
             <span><a href="https://github.com/AhanBhatt/CacheIR" target="_blank" rel="noreferrer">Code ↗</a></span>
             </div>
         </article>
