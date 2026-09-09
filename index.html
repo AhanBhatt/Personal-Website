@@ -563,6 +563,7 @@
       flex-wrap: wrap;
     }
     .tTop b{ font-size: 15px; letter-spacing: -0.01em; }
+    .tTop b a{ text-decoration: underline; text-underline-offset: 3px; }
     .tTop span{ color: var(--muted2); font-size: 12px; border: 1px solid var(--stroke); padding: 6px 10px; border-radius: 999px; background: color-mix(in oklab, var(--card) 65%, transparent); }
     .tItem p{ margin: 8px 0 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
     .bullets{ margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
@@ -682,7 +683,8 @@
             I build AI systems that pair research rigor with deployable engineering.
             My recent work spans transformer compilers, GPU-accelerated LLM inference systems,
             adversarial evaluation infrastructure, and trustworthy AI platforms, with hands-on work
-            across CUDA, Triton, PyTorch, FastAPI, and full-stack ML systems.
+            across CUDA, Triton, PyTorch, FastAPI, and full-stack ML systems. I also build production
+            AI agents for healthcare and retail, with hybrid retrieval, tool integrations, and human review.
           </p>
 
           <div class="heroCtas">
@@ -719,7 +721,7 @@
           <div class="mini reveal">
             <h3>Now</h3>
             <ul class="list">
-              <li><span class="dot"></span><span>CacheIR: GPU-accelerated compiler and runtime for decoder-only transformer inference</span></li>
+              <li><span class="dot"></span><span>CacheIR: GPU-accelerated transformer compiler/runtime, up to 3.24x faster than vLLM on certain workloads</span></li>
               <li><span class="dot"></span><span>BreakPoint: failure-to-eval compiler for adversarial LLM regression suites</span></li>
               <li><span class="dot"></span><span>ReliaGuard Studio: neuro-symbolic human-AI reliance detection with conformal gating and explainable dashboards</span></li>
             </ul>
@@ -756,12 +758,45 @@
             </div>
             <p>
               Python, C++, CUDA, Triton, and TypeScript across ML pipelines, compiler/runtime systems,
-              backend services, experiment tracking, and cloud infrastructure.
+              backend services, experiment tracking, and cloud infrastructure. LangGraph, MCP, and hybrid RAG
+              support agent workflows with evaluation, observability, and guardrails.
             </p>
             <div class="meta">
               <span>Python</span><span>C++20</span><span>CUDA</span><span>Triton</span><span>FastAPI</span>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Education</h2>
+        </div>
+
+        <div class="timeline reveal">
+          <div class="tItem">
+            <div class="tTop">
+              <b>University of California, Santa Cruz</b>
+              <span>Aug 2025 – Jun 2026</span>
+            </div>
+            <p>Master of Science in Computer Science and Engineering - Santa Cruz, California</p>
+            <ul class="bullets">
+              <li>GPA: 3.82</li>
+            </ul>
+          </div>
+
+          <div class="tItem">
+            <div class="tTop">
+              <b>Indus Institute of Technology and Engineering</b>
+              <span>Aug 2020 – Jul 2024</span>
+            </div>
+            <p>Bachelor of Technology in Computer Engineering - Ahmedabad, India</p>
+            <ul class="bullets">
+              <li>GPA: 3.94</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -796,7 +831,7 @@
               <h3>ML Systems & Compilers</h3>
             </div>
             <p>
-              CUDA, Triton, C++20, pybind11, custom IRs, operator fusion,
+              CUDA, Triton, C++20, pybind11, custom IRs, operator fusion, High-Performance Computing (HPC),
               kernel selection, memory/execution planning, paged KV caching, quantization
             </p>
           </article>
@@ -806,7 +841,18 @@
               <h3>LLM & Data Tools</h3>
             </div>
             <p>
-              LangChain, ChromaDB, RAG, vector databases, PyPDF
+              LangChain, LangGraph, MCP, RAG, hybrid RAG, ChromaDB, vector databases,
+              tool calling, LoRA/QLoRA, PyPDF
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="cardTop">
+              <h3>Agents & AI Reliability</h3>
+            </div>
+            <p>
+              Multi-agent systems, agentic AI, LLM evaluation, LLM observability,
+              AI guardrails, human-in-the-loop (HITL)
             </p>
           </article>
 
@@ -815,7 +861,7 @@
               <h3>Backend & Deployment</h3>
             </div>
             <p>
-              Node.js, FastAPI, Flask, REST APIs, Docker,
+              Node.js, FastAPI, Flask, REST APIs, FHIR, Docker, CMake, Bazel,
               Kubernetes, Linux, Git, CI/CD, Nginx
             </p>
           </article>
@@ -826,7 +872,7 @@
             </div>
             <p>
               AWS EC2, S3, IAM, Lambda, SageMaker, CloudWatch,
-              PostgreSQL, Redis, ETL, schema design
+              PostgreSQL, Redis, real-time data pipelines, ETL, schema design
             </p>
           </article>
 
@@ -848,14 +894,14 @@
     <section id="timeline">
       <div class="container">
         <div class="sectionHead">
-          <h2>Experience & Education</h2>
+          <h2>Experience</h2>
           
         </div>
 
         <div class="timeline reveal">
           <div class="tItem">
             <div class="tTop">
-              <b>Researcher - AI Explainability and Accountability (AIEA) Lab @ UCSC</b>
+              <b>Researcher - <a href="https://www.linkedin.com/company/aiea-lab/posts/" target="_blank" rel="noopener noreferrer">AI Explainability and Accountability (AIEA) Lab @ UCSC</a> [10 months]</b>
               <span>Sep 2025 – Jun 2026</span>
             </div>
             <p>Built ReliaGuard Studio and BreakPoint for human-AI reliance detection and adversarial LLM evaluation.</p>
@@ -868,7 +914,20 @@
 
           <div class="tItem">
             <div class="tTop">
-              <b>Data Scientist - AI Institute of South Carolina (remote)</b>
+              <b>Data Scientist - <a href="https://www.linkedin.com/company/growexx/home/" target="_blank" rel="noopener noreferrer">Growexx</a> [1 year 1 month]</b>
+              <span>Aug 2024 - Aug 2025</span>
+            </div>
+            <p>Built healthcare and retail AI agents for production workflows in Ahmedabad, India.</p>
+            <ul class="bullets">
+              <li>Developed a prior-authorization and clinical workflow agent using FHIR, hybrid RAG, LangGraph, and tool integrations including MCP to retrieve and validate patient evidence.</li>
+              <li>Added automated evaluations and clinician approval gates to support HIPAA-compliant workflows.</li>
+              <li>Integrated CRM, inventory, and customer-support platforms into retail multi-agent systems for service automation, product recommendations, and order resolution, with observability, guardrails, and human escalation.</li>
+            </ul>
+          </div>
+
+          <div class="tItem">
+            <div class="tTop">
+              <b>AI Researcher (Volunteer) - <a href="https://www.linkedin.com/company/aiisc/posts/" target="_blank" rel="noopener noreferrer">AI Institute of South Carolina</a> (remote) [1 year]</b>
               <span>Jun 2024 – May 2025</span>
             </div>
             <p>Researched multimodal toxicity mitigation and anomaly detection with reproducible experiment workflows.</p>
@@ -880,7 +939,7 @@
 
           <div class="tItem">
             <div class="tTop">
-              <b>Data Scientist - Space Applications Centre (ISRO)</b>
+              <b>Data Scientist - <a href="https://www.linkedin.com/company/space-applications-centre-isro/posts/" target="_blank" rel="noopener noreferrer">Space Applications Centre (ISRO)</a> [5 months]</b>
               <span>Jan 2024 – May 2024</span>
             </div>
             <p>Built an end-to-end LSTM satellite clock-bias prediction platform for more reliable navigation timing forecasts.</p>
@@ -892,37 +951,16 @@
 
           <div class="tItem">
             <div class="tTop">
-              <b>Software Engineer (AI) - Indus Institute of Technology and Engineering</b>
-              <span>May 2022 – Jan 2024</span>
+              <b>AI and Data Engineer - <a href="https://www.linkedin.com/company/intellytics-solutions/posts/" target="_blank" rel="noopener noreferrer">Intellytics</a> [2 years]</b>
+              <span>Feb 2022 - Jan 2024</span>
             </div>
-            <p>Developed Node.js-backed LLM pipelines for chat, knowledge graphs, and retrieval-augmented medical QA.</p>
+            <p>Coordinated with multiple US-based clients to build agentic AI, LLM, and ML solutions.</p>
             <ul class="bullets">
-              <li>Built a university website chatbot, automated knowledge graph generation, and medical QA workflows.</li>
-              <li>Evaluated GPT-4, LLaMA-2, and BERT for structured semantic extraction and grounded reasoning.</li>
+              <li>Used RAG, tool calling, hybrid retrieval, and LoRA/QLoRA across client solutions.</li>
+              <li>Worked with Kubernetes, real-time data pipelines, and production evaluation and observability.</li>
             </ul>
           </div>
 
-          <div class="tItem">
-            <div class="tTop">
-              <b>University of California, Santa Cruz</b>
-              <span>Aug 2025 – Jun 2026</span>
-            </div>
-            <p>Master of Science in Computer Science and Engineering - Santa Cruz, California</p>
-            <ul class="bullets">
-              <li>GPA: 3.82</li>
-            </ul>
-          </div>
-
-          <div class="tItem">
-            <div class="tTop">
-              <b>Indus Institute of Technology and Engineering</b>
-              <span>Aug 2020 – Jul 2024</span>
-            </div>
-            <p>Bachelor of Technology in Computer Engineering - Ahmedabad, India</p>
-            <ul class="bullets">
-              <li>GPA: 3.94</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
@@ -939,9 +977,9 @@
             <h3>CacheIR</h3>
             <span class="tag">Compiler runtime</span>
             </div>
-            <p>Inspectable compiler and runtime for GPU-accelerated decoder-only transformer inference: imports Llama, Mistral, and Qwen-style models into a custom IR, applies transformer-specific optimizations, plans memory and execution, selects CUDA kernels, and runs through a reference runtime with vLLM-compatible serving concepts.</p>
+            <p>Narrow, inspectable compiler/runtime for GPU-accelerated decoder-only transformer inference, up to 3.24x faster than vLLM on certain workloads. It imports Llama, Mistral, and Qwen models into a custom IR, applies transformer-specific compiler optimizations, plans memory and execution, selects CUDA kernels, and serves through a reference runtime.</p>
             <div class="meta">
-            <span>CUDA</span><span>Triton</span><span>C++20</span><span>Custom IR</span>
+            <span>CUDA</span><span>Triton</span><span>CMake</span><span>pybind11</span>
             <span><a href="https://github.com/AhanBhatt/CacheIR" target="_blank" rel="noreferrer">Code ↗</a></span>
             </div>
         </article>
@@ -951,7 +989,7 @@
             <h3>BreakPoint</h3>
             <span class="tag">LLM evaluation</span>
             </div>
-            <p>Failure-to-eval compiler for LLM systems that mines real failure modes into versioned adversarial regression suites with DSL-defined traps and rubrics, multi-judge calibration, RAG/tool simulators, CI gates, and FastAPI/Next.js dashboards.</p>
+            <p>Failure-to-eval compiler for LLM systems that mines real failure modes into versioned adversarial regression suites with DSL-defined traps and rubrics, multi-judge calibration, RAG/tool simulators, CI gates, and FastAPI/Next.js dashboards. Includes 360 validated evaluation cases across 9 failure families.</p>
             <div class="meta">
             <span>Multi-judge</span><span>DuckDB</span><span>CI gates</span>
             <span><a href="https://github.com/AhanBhatt/BreakPoint" target="_blank" rel="noreferrer">Code ↗</a></span>
@@ -1018,17 +1056,6 @@
             </div>
         </article>
 
-        <article class="card third reveal">
-            <div class="cardTop">
-            <h3>Med-Bot: Retrieval Augmented Medical Assistant</h3>
-            <span class="tag">RAG</span>
-            </div>
-            <p>Retrieval-augmented medical assistant built to provide accurate and reliable answers grounded in medical PDFs.</p>
-            <div class="meta">
-            <span>Llama-2</span><span>AutoGPTQ</span><span>ChromaDB</span>
-            <span><a href="https://github.com/AhanBhatt/Med-Bot" target="_blank" rel="noreferrer">Code ↗</a></span>
-            </div>
-        </article>
         </div>
     </div>
     </section>
